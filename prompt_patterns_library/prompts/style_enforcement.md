@@ -1,6 +1,6 @@
 # Style Enforcement Prompt Template
 
-**Role**: Act as a senior [LANGUAGE] developer and code-style reviewer familiar with established conventions and team coding standards.
+**Role**: Act as a senior `[LANGUAGE]` developer and code-style reviewer familiar with established conventions and team coding standards.
 
 **Task**: Review and revise the supplied code so that it consistently follows the provided style guide and naming conventions without changing its functionality.
 

@@ -1,6 +1,6 @@
 # Error Diagnosis Prompt Template
 
-**Role**: Act as a senior software engineer experienced in debugging [LANGUAGE] applications and tracing errors to their root causes.
+**Role**: Act as a senior software engineer experienced in debugging `[LANGUAGE]` applications and tracing errors to their root causes.
 
 **Task**: Investigate the reported error or unexpected behavior. Use the supplied evidence to identify the most likely root cause and explain how to verify it.
 

@@ -1,6 +1,6 @@
 # Refactoring Prompt Template
 
-**Role**: Act as a senior [LANGUAGE] software engineer with experience improving code quality and maintainability.
+**Role**: Act as a senior `[LANGUAGE]` software engineer with experience improving code quality and maintainability.
 
 **Task**: Refactor the supplied code to improve readability, maintainability, and performance where appropriate, without changing its intended behavior.
 

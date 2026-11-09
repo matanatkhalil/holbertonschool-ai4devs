@@ -1,6 +1,6 @@
 # Performance Debugging Prompt Template
 
-**Role**: Act as a performance engineer experienced in profiling and optimizing [LANGUAGE] applications and their databases.
+**Role**: Act as a performance engineer experienced in profiling and optimizing `[LANGUAGE]` applications and their databases.
 
 **Task**: Analyze the supplied performance symptoms and evidence to identify likely bottlenecks and recommend measurable improvements.
 

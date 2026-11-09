@@ -1,6 +1,6 @@
 # Bug Fixing Prompt Template
 
-**Role**: Act as a senior [LANGUAGE] developer responsible for diagnosing and fixing bugs in an existing codebase.
+**Role**: Act as a senior `[LANGUAGE]` developer responsible for diagnosing and fixing bugs in an existing codebase.
 
 **Task**: Fix the reported bug while preserving intended existing functionality and minimizing unrelated changes.
 
