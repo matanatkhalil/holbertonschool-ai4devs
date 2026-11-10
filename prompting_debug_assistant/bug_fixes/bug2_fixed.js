@@ -1,4 +1,4 @@
-function getShippingCost(orderTotal, isMember) {
+function getShippingCost(orderTotal) {
     const standardShipping = 8;
     const freeShippingThreshold = 50;
     
