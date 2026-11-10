@@ -24,3 +24,5 @@ const cart = [
 ];
 
 console.log(calculateOrderTotal(cart, false));
+
+if (typeof module !== "undefined") module.exports = { getShippingCost, calculateOrderTotal };

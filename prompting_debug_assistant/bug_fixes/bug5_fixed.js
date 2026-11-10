@@ -21,3 +21,5 @@ const players = [
 ];
 
 printLeaderboard(players);
+
+if (typeof module !== "undefined") module.exports = { sortScores };
