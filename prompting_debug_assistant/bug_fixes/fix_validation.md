@@ -1,4 +1,4 @@
-# Fix Validation Report
+# fix_validation.md – Fix Validation Report
 
 ## Bug 1 – bug1_fixed.py
 - **Command**: `python bug1_fixed.py` and `python test_bugs.py`
@@ -9,7 +9,9 @@
   Total: 27.225
   ```
 - **Test**: `assert abs(calculate_total(...) - 27.225) < 1e-9` passed
-- **Fix confirmed**: ✔ Yes. The missing `:` operator was restored and the script now runs.
+- **Before fix (bug behavior)**: `SyntaxError: invalid syntax` on `def calculate_total(prices, tax_rate):` (missing `:`)
+- **Result**: PASS
+- **Fix confirmed**: ✔ Yes. The missing `:` after the function definition was restored and the script now runs.
 
 ## Bug 2 – bug2_fixed.js
 - **Command**: `node bug2_fixed.js` and `node test_bugs.js`
@@ -20,6 +22,8 @@
   41
   ```
 - **Additional assertions**: getShippingCost(0)=8, (33)=8, (50)=0, (60)=0, all passed
+- **Before fix (bug behavior)**: The shipping logic contained an incorrect condition that granted free shipping to all members, regardless of whether their order reached the free-shipping threshold
+- **Result**: PASS
 - **Fix confirmed**: ✔ Yes. Shipping is free at or above 50, otherwise 8. Membership does not affect shipping.
 
 ## Bug 3 – bug3_fixed.py
@@ -38,6 +42,8 @@
   Scores: []
   Average: N/A (no recorded scores)
   ```
+- **Before fix (bug behavior)**: ZeroDivisionError for Leyla's empty score list, program crashed
+- **Result**: PASS
 - **Fix confirmed**: ✔ Yes. The empty list no longer raises ZeroDivisionError.
 
 ## Bug 4 – bug4_fixed.c
@@ -51,6 +57,8 @@
   Total: 101
   Average: 20.20
   ```
+- **Before fix (bug behavior)**: Loop ran past the array end (i <= count), reading an invalid element and corrupting Total/Average
+- **Result**: PASS
 - **Fix confirmed**: ✔ Yes. The loop uses `i < count`, so there is no out-of-bounds read. It compiles with no warnings.
 
 ## Bug 5 – bug5_fixed.js
@@ -65,6 +73,8 @@
   80
   100
   ```
+- **Before fix (bug behavior)**: Default .sort() compared as strings, giving 100, 25, 80, 9 instead of 9, 25, 80, 100
+- **Result**: PASS
 - **Fix confirmed**: ✔ Yes. The comparator `(a, b) => a - b` sorts numerically instead of as strings.
 
 ## Manual Tweaks
