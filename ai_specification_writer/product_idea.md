@@ -4,7 +4,7 @@
 
 Create an engaging and accessible digital platform that combines reading, knowledge discovery, and mindfulness. Help people develop a consistent reading habit, explore fascinating ideas, improve self-awareness, and make time for meaningful reflection in their everyday lives.
 
-## Primary Users
+## Users
 
 - **Curious Readers:** People who enjoy books, articles, and discovering new subjects. They need an organized space to find interesting reading materials and keep track of what they learn.
 - **Personal Development Enthusiasts:** Individuals interested in self-awareness, building healthy habits, and improving their daily routines. They need practical tools and resources to support their personal growth.
