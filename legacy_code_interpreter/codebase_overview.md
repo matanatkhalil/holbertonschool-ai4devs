@@ -22,20 +22,64 @@ This makes it a useful example of a legacy codebase that may still exist in olde
 
 ## 3. Size (Lines of Code)
 
-**Language:** JavaScript
+- **Language:** JavaScript
+- **Source directory**: `src/`
+- **JavaScript source lines**: 7775
+- **JavaScript source files**: 95
 
-The exact lines of code depend on whether the count includes source files, tests, build scripts, and documentation.
+The numbers above were calculated via cloning the historical jQuery 1.12.4 source code locally and using the commands below in the terminal sequentially:
+```
+(Get-ChildItem .\src -Recurse -File -Filter *.js |
+    Get-Content | Measure-Object -Line).Lines
+```
 
-For this analysis, LOC should be measured from the checked-out 1.12.4 repository, focusing on the JavaScript source files.
+```
+(Get-ChildItem .\src -Recurse -File -Filter *.js).Count
+```
 
 ## 4. Main Dependencies and Technologies
 
-- **JavaScript:** Main implementation language.
-- **Browser DOM APIs:** Used for document manipulation and interaction.
-- **AMD module support:** Supports integration with AMD module loaders.
-- **Build and testing tools:** The project uses build tooling and automated tests to maintain and distribute the library.
+### Runtime Dependencies
 
-The library itself does not require another JavaScript library at runtime.
+The jQuery 1.12.4 `package.json` declares no external npm runtime dependencies (`"dependencies": {}`).
+
+The library primarily uses JavaScript and browser DOM APIs.
+
+### Development Dependencies
+
+The project declares the following development dependencies in its 1.12.4 `package.json`:
+
+| Package | Version | Purpose |
+|---|---:|---|
+| grunt | 0.4.5 | Build automation |
+| grunt-cli | 0.1.13 | Grunt command-line interface |
+| grunt-babel | 5.0.1 | JavaScript transpilation |
+| core-js | 0.9.17 | JavaScript compatibility utilities |
+| jsdom | 5.6.1 | DOM environment for testing |
+| qunitjs | 1.17.1 | Unit testing |
+| requirejs | 2.1.17 | AMD module loading |
+| sinon | 1.12.2 | Test spies, stubs, and mocks |
+| grunt-contrib-jshint | 0.11.2 | JavaScript linting |
+| grunt-contrib-uglify | 0.9.2 | JavaScript minification |
+| grunt-contrib-watch | 0.6.1 | File change monitoring |
+| grunt-compare-size | 0.4.0 | Build size comparison |
+| grunt-jscs | 2.1.0 | JavaScript code style checking |
+| grunt-jsonlint | 1.0.4 | JSON validation |
+| grunt-npmcopy | 0.1.0 | Copying npm dependencies |
+| grunt-git-authors | 2.0.1 | Contributor information |
+| commitplease | 2.0.0 | Commit message validation |
+| gzip-js | 0.3.2 | Gzip compression |
+| load-grunt-tasks | 1.0.0 | Automatic Grunt task loading |
+| npm | 2.1.12 | Package management |
+| qunit-assert-step | 1.0.3 | QUnit test utilities |
+| sizzle | 2.2.1 | CSS selector engine |
+| strip-json-comments | 1.0.3 | JSON comment removal |
+| testswarm | 1.1.0 | Test execution infrastructure |
+| win-spawn | 2.0.0 | Windows process spawning |
+
+The project uses Grunt as its primary build automation tool and QUnit for automated testing.
+
+**Source:** `package.json` from the jQuery 1.12.4 release.
 
 ## 5. Known Issues and Pain Points
 
